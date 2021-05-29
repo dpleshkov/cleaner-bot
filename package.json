@@ -1,0 +1,19 @@
+{
+  "name": "cleaner-bot",
+  "version": "1.0.0",
+  "description": "Remake of Starblast Discord's Cleaner bot, which printed out the information on a running game if the link was entered in chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "author": "Dmitry Pleshkov",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "starblast-pinger": "^1.0.3"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
