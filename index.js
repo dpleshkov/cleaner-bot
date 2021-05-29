@@ -22,10 +22,6 @@ if (!String.prototype.replaceAll) {
 
 const client = new Discord.Client();
 
-let linkify = (message) => {
-    return message.includes("starblast.io") && !message.includes("://starblast.io") ? message.replaceAll("starblast.io", "https://starblast.io") : message;
-}
-
 let extractGameLink = (message) => {
     if (message.includes("starblast.io/#")) {
         return "https://starblast.io/#" + message.split("#")[1].split(" ")[0]
@@ -55,7 +51,6 @@ let systemInfo = async(url) => {
     info.mode.asteroids_strength = info.mode.asteroids_strength || 1;
     info.mode.friction_ratio = info.mode.friction_ratio || 1;
     info.mode.survival_time = info.mode.survival_time || 60;
-    let result = "";
     let modding = info.mode.id === "modding";
     let gameMode = modding ? info.mode.root_mode : info.mode.id;
     if (gameMode === "team") {
